@@ -13,7 +13,18 @@ viewLive_link: 'https://crwn-clothing-mauve.vercel.app/'
 I built this project as part of the Complete React Zero To Mastery course provided by the Zero To Mastery Academy.<br>
 This course was originally recorded in 2020 but was updated in 2021 and has recently undergone a complete rerecording for 2022 including all the React best practices and various library updates (e.g. React Router v6 and Firebase v9). I have completed the 2021 updated course as well as the 2022 rerecorded course.
 
-#### The Tools I learned about in this course (all of which are implemented in Crown Clothing):  
+Although I built Crown Clothing during the course, I used what I learned about React and the various libraries to implement my own features into the project. These features were a **Confirmation Page**, an **Order History Page** and a **cart collection** in the firebase database with documents specific to the user. I also implemented rerouting at certain url paths depending on whether the user was signed in. I discuss these features more thoroughly at the end of this project summary under the heading [My Features](#my-features).
+
+### Table of Contents
+
+1. [Using the Crown Clothing App](#using-the-crown-clothing-app)
+2. [The Tools I learned about in this course and are implemented in Crown Clothing](#the-tools-i-learned-about-in-this-course-and-are-implemented-in-crown-clothing))
+3. [The Tools this course also covered but are *not* implemented in the final project Crown Clothing](#the-tools-this-course-also-covered-but-are-not-implemented-in-the-final-project-crown-clothing)
+4. [My Features](#my-features)
+
+### Using the Crown Clothing App
+
+### The Tools I learned about in this course and are implemented in Crown Clothing:  
 
 - React Hooks
 - React Router (v6)
@@ -33,9 +44,7 @@ This course was originally recorded in 2020 but was updated in 2021 and has rece
 - Styled Components 
 - Typescript in React (Redux, Sagas, Selectors, Firebase functions and React components were all typed)
 
-Although I built Crown Clothing during the course, I used what I learned about React and the various libraries to implement my own features into the project. These features were a **Confirmation Page** on payment of items, an **Order History Page** and a **cart collection** in the firebase database with documents specific to the user. I also implemented rerouting at certain url paths depending on whether the user was signed in. I discuss these features more thoroughly at the end of this project summary under the heading *My Features*.
-
-#### The Tools this course also covered but are *not* implemented in the final project Crown Clothing:     
+### The Tools this course also covered but are *not* implemented in the final project Crown Clothing:     
 
 - Context API (used Redux instead)
 - Redux thunk (went with Redux Saga instead)
@@ -46,7 +55,7 @@ Although I built Crown Clothing during the course, I used what I learned about R
 
 ### My Features       
 
-- *Firestore Cart Collection and Orders Collection*
+- ***Firestore Cart Collection and Orders Collection***
 
 The firestore cart collection and orders collection contain documents with uids matching user uids so that each document is specific to each user. 
 
@@ -59,7 +68,7 @@ The data in the orders collection is used to populate the Previous Orders Page.
 
 I used what I learned about firestore rules in this course and updated these rules so that a user can only retrieve and update data in a cart or orders document if their uid matches the uid of that cart or orders document.
 
-- *Payment Confirmation Page*
+- ***Payment Confirmation Page***
 
 While Stripe simulates the payment process on confirming purchase of the cart items, the value of cartItems in redux state is set to the value of the confirmedItems redux state.     
 After Stripe completes the payment the user is automatically redirected to the Payment Confirmation Page.      
@@ -67,7 +76,7 @@ This page displays the items the user just bought (using the confirmedItems valu
 These items are added to the orders document specific to the user currently logged in. On visiting the Previous Orders Page the newly bought items will now also be displayed.         
 The shopping bag is cleared along with the user specific cart document in firestore (it now contains just an empty array).
 
-- *Previous Orders Page*
+- ***Previous Orders Page***
 
 On visiting this page, the orders for the logged in user are fetched from firestore and are used to populate the orders redux state variable.             
 The orders are stored in redux as an array of objects.      

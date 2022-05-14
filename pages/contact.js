@@ -55,7 +55,7 @@ function ContactPage() {
 
                     <label className="mt-[15px] text-[#87848B]" htmlFor="message">Your Message</label>
                     <textarea 
-                        className="border-[1px] border-[#87848B] min-h-[150px] max-h-[150px] focus:outline-none"
+                        className="border-[1px] border-[#87848B] min-h-[100px] max-h-[100px] focus:outline-none"
                         id="message"
                         type="text"
                         value={formInput.message}

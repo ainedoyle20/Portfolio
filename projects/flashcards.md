@@ -10,14 +10,14 @@ viewLive_link: 'https://flashcards-rho.vercel.app/'
 
 ![Flashcards Project Cover!](/images/projects/flashcards.png)
 
-### Table of Contents    
+## Table of Contents    
 
 1. [Using the Flashcards App](#using-the-flashcards-app)
 2. [A List of Features used in this Project](#a-list-of-features-used-in-this-project)
 3. [Discussing Next JS, Tailwind CSS and Redux](#discussing-next-js-tailwind-css-and-redux)
 4. [Discussing the Next JS Course](#discussing-the-next-js-course)
 
-### Using the Flashcards App
+## Using the Flashcards App
 
 In order for a user to get access to the application they must first create an account, via email or google, or log in using their email and password or by google.       
 
@@ -37,7 +37,7 @@ To add flashcards to a deck (if the deck is public the user must be the creator 
 The flashcards can be viewed as traditional card flashcards where the question shown on the front and the card is flipped (by clicking) to reveal the answer on the back.
 Alternatively, flashcards can be viewed in a list form. Both the question and answer are displayed when in this format.
 
-### A List of Features used in this Project
+## A List of Features used in this Project
 
 - Next JS
 - Tailwind CSS
@@ -50,9 +50,10 @@ Alternatively, flashcards can be viewed in a list form. Both the question and an
 - React cookie
 - uuidv4
 
-### Discussing Next JS, Tailwind CSS and Redux
+## Discussing Next JS, Tailwind CSS and Redux
 
-***Next JS***     
+### ***Next JS***     
+
 Flashcards is the first (personal) project I have built using Next.js. I started this project on completing the
 <a href="https://www.udemy.com/course/nextjs-react-the-complete-guide/" target="_blank">Next.js and React - The Complete Guide</a> by Maximilian Schwarzmuller.
 
@@ -91,22 +92,23 @@ Example: Setting up routes in Crown Clothing
 
 Instead, I simply added my desired pages into the `pages` directory as any file in this location is automatically available as a route. Their url path names are dependent on their file name. Any file named 'index.js' is routed to the root of their directory while files named, for example, 'contact.js' will have a url based on that name and their location in the `pages` directory.
 
-`/pages/index.js` - "/"       
-`pages/privateDecks/index.js` - "/privateDecks"
+**/pages/index.js** - "/"       
+**pages/privateDecks/index.js** - "/privateDecks"
 
-Next.js also makes it very easy to create dynamic routesby simply adding a bracket: 
-`/pages/privateDecks/[deckId].js` - "/privateDecks/(some-id)"
+Next.js also makes it very easy to create dynamic routesby simply adding a bracket:             
+**/pages/privateDecks/[deckId].js** - "/privateDecks/(some-id)"
 
 Next.js Link component and useRouter hook are used in Flashcards to navigate between pages. These two components combined with the file-based routing system meant that there was never any need to install a routing library, such as React Router, which in turn resulted in a reduced final bundle size (not to mention less setup).
 
-- Next.js getServerSideProps
+- Next.js **getServerSideProps**
 
 I used getServerSideProps and its context in Flashcards to access the deck id in the url of the dynamic route. This id was then used to access a specific deck data which was used to populate the dynamic page. The great advantage I found with using getServerSideProps in this way is that the steps above are all done on the server side before the page is rendered. The user is not watching a blank page (or worse a page with an error) waiting for some data to appear. The user experience was improved.
 
 I also found getServerSideProps extremely useful in setting up route guards in my project. I wanted to prevent any unauthorised user from accessing any page other than the authentication page. Or if they were authenticated I wanted them unable to access the authentication page to avoid multiple log-ins.         
 I have done this in previous projects by checking, from within a component, if a user is logged in. If there was no user then the application rerouted to the authentication page. The issue with this however is that the data on these pages would sometimes flash and be visible before the user was rerouted. This is not the case with getServerSideProps. The check is done on the server before the page has even rendered. If the user is unauthenticated the rerouting is done before any data is displayed. I found getServerSideProps to greatly improve my projects security.
 
-***Tailwind CSS***          
+### ***Tailwind CSS*** 
+
 Flashcards is the first project in which I have used Tailwind CSS. Originally I built this project using plain CSS. Converting the project over only highlighted the frameworks advantages.
 
 - Tailwind CSS is Customizable
@@ -130,7 +132,8 @@ Normally when designing my projects I would write my styles for larger screens f
 Tailwind CSS makes responsive design very easy as it provides a set of default breakpoints representing the most common screen sizes. These breakpoints were represented by prefixes like 'sm' for a minimum of 640px and 'md' for a minimum of 768px. In order to override certain styles to match larger screens all I had to do was add the prefix before the style I wished to change, e.g. 'lg:w-3/4' meaning at the minimum screen width of 1024px the width of that element would now be 75% of its container (regardless of its width on smaller screens).          
 Because of Tailwind CSS, by the time I had completely converted my Flashcards project from plain CSS to tailwind my mindset had firmly shifted to take on the mobile-first approach. Since the majority of users today view websites from a mobile screen this styling approach can only be advantageous.           
 
-***Redux, Redux Thunk and Reselect***           
+### ***Redux, Redux Thunk and Reselect***      
+
 I used **Redux** for state management in this project. Redux provides a single source of state for the entire application preventing the need for passing props and the possible occurance of prop drilling.
 
 I chose Redux over Context API as I felt redux was better suited to Flashcards considering the project has:
@@ -185,7 +188,7 @@ Although reselect selectors only momoize the most recent set of parameters, even
 
 For this reason I used createSelector when creating each of my selectors.
 
-### Discussing the Next JS Course           
+## Discussing the Next JS Course           
 
 <a href="https://www.udemy.com/course/nextjs-react-the-complete-guide/" target="_blank">Next.js and React - The Complete Guide</a> was created by Maximilian Schwarzmuller. This course has one section that serves as a React refresher, the rest is focused on Next.js.           
 
