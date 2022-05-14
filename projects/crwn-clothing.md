@@ -24,6 +24,27 @@ Although I built Crown Clothing during the course, I used what I learned about R
 
 ### Using the Crown Clothing App
 
+A Navigation bar is located at the top of this app on every page. You can use this bar to navigate between the home, shop, orders, contact and authentication pages. 
+
+To create an account with Crown Clothing navigate to the authentication page. Here you can fill in your details (display name, email, password etc) or continue with your Google account. When you have successfully signed in you will be redirected to the Home Page.
+
+Although you do not need an account to shop with Crown Clothing, some features of the website will be unavailable to you if you are not logged in (e.g. viewing your orders history).
+
+On the home page you can choose a clothes section that you wish to browse. When you do this you will be directed to that specific clothing section page where all the clothes available in that section will be displayed. You can browse the collection and add items to your cart by clicking the ADD TO CART button attached to each item.
+
+Alternatively you can navigate to the shop page where you will see a preview of items (4 of them) for all the clothing sections. To browse all items of a specific section (enter the specific section page as mentioned above) simpley click the SHOW ALL option.
+
+Clicking the cart icon located in the navigation bar will toggle the cart dropdown allowing you to view your cart items. To navigate to the checkout page click the GO TO CHECKOUT button in the cart dropdown.
+
+The Checkout Page will display your cart items and the total amount you will pay. You can increase or decrease the quantity of any item or completely remove the item on this page.         
+To purchase the items click on the PAY NOW button located at the bottom of the page and enter your card details (a test card is available). Once your payment is complete you will be redirected to the Payment Confirmation Page.          
+The Payment Confirmation Page will display the items you have successfully purchased and the final amount that was paid.
+
+To view your previous orders simply navigate to the Orders Page. Note that you must be signed in to view past orders.           
+On this page your previous orders will be listed under the date of purchase and in order of most recently orderd.
+
+To logout (if you are signed in) simply click the 'Sign Out' option on the navigation bar.
+
 ### The Tools I learned about in this course and are implemented in Crown Clothing:  
 
 - React Hooks
