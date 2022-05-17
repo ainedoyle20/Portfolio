@@ -19,6 +19,7 @@ export default function Home({ projects }) {
       <Hero />
 
       <ProjectContainer projects={projects} />
+      
     </div>
   );
 }

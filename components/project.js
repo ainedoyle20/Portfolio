@@ -10,10 +10,12 @@ function Project({ project }) {
             <p className="my-[15px] mx-0">{project.frontmatter.excerpt}</p>
 
             <Link href={`/projects/${project.slug}`}>
-                <a className="inline-block bg-[#343036] text-white border-0 py-[8px] px-[16px] rounded-[5px] cursor-pointer decoration-none text-[15px] focus:outline-none hover:scale-95">Read More</a>
+                <a className="inline-block bg-[#243b55] text-white border-0 py-[8px] px-[16px] rounded-[5px] cursor-pointer decoration-none text-[15px] focus:outline-none hover:scale-95">Read More</a>
             </Link>
         </div>
     );
 }
 
 export default Project;
+
+// bg-[#343036]

@@ -9,7 +9,7 @@ function MainHeader() {
     }
 
     return (
-        <header className="bg-[#87848B] w-full flex justify-between p-3">
+        <header className="absolute top-0 bg-[#141e30] w-full flex justify-between p-3">
             <div className="text-md text-white">
                 <Link href="/">
                     Home
@@ -35,3 +35,4 @@ export default MainHeader;
 
 
 //bg-[#343036]
+// bg-[#87848B]

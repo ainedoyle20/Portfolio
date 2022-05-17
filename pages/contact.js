@@ -21,19 +21,19 @@ function ContactPage() {
 
     return (
         <>
-        <h1 className="text-[40px] flex justify-center mt-[60px] text-[#87848B] font-extrabold mb-[30px]">GET IN TOUCH</h1>
-        <div className="rounded-[10px] shadow-[0_4px_8px_0px_rgba(0,0,0,0.2)] flex justify-center items-center m-auto h-[60vh] w-[85vw] md:w-[75vw] xl:w-[60vw]">
+        <h1 className="text-[40px] flex justify-center mt-[80px] text-[#243b55] font-extrabold mb-[30px]">GET IN TOUCH</h1>
+        <div className="rounded-[10px] shadow-[0_4px_8px_0px_rgba(0,0,0,0.2)] flex flex-col justify-center items-center sm:flex-row m-auto h-auto sm:h-[60vh] w-[95vw] md:w-[85vw] xl:w-[75vw] 2xl:w-[60vw]">
 
-            <div className="flex flex-col justify-center items-center h-[70%] border-r-2 border-r-[#87848B] w-[40%] cursor-default">
-                <span className="w-3/4 p-2 m-2 border-2 border-[#87848B] text-[#87848B] cursor-pointer">LinkedIn</span>
-                <span className="w-3/4 p-2 m-2 border-2 border-[#87848B] text-[#87848B]">Phone: 083 807 4866</span>
-                <span className="w-3/4 p-2 m-2 border-2 border-[#87848B] text-[#87848B]">Email: ainedoyleAD@gmail.com</span>
-                <span className="w-3/4 p-2 m-2 border-2 border-[#87848B] text-[#87848B]">Address: Kildare, Ireland</span>
+            <div className="flex flex-col justify-center items-center h-[70%] sm:border-r-[1px] border-r-[#243b55] w-full sm:w-[50%] cursor-default">
+                <span className="w-3/4 p-2 m-2 border-2 border-[#243b55] text-[#243b55] cursor-pointer">LinkedIn</span>
+                <span className="w-3/4 p-2 m-2 border-2 border-[#243b55] text-[#243b55]">Phone: 083 807 4866</span>
+                <span className="w-3/4 p-2 m-2 border-2 border-[#243b55] text-[#243b55]">Email: ainedoyleAD@gmail.com</span>
+                <span className="w-3/4 p-2 m-2 border-2 border-[#243b55] text-[#243b55]">Address: Kildare, Ireland</span>
             </div>
 
-            <div className="flex justify-center h-[70%] w-[40%]">
+            <div className="flex justify-center h-[70%] w-full sm:w-[50%] border-t-[1px] border-t-[#243b55] mt-10 sm:mt-0 sm:border-t-0 sm:border-l-[1px] border-l-[#243b55]">
                 <form className="flex flex-col w-3/4 p-3 mt-[20px]" onSubmit={onSubmitHandler}>
-                    <label className="mt-[15px] text-[#87848B]" htmlFor="name">Your Name</label>
+                    <label className="mt-[15px] text-[#243b55]" htmlFor="name">Your Name</label>
                     <input
                         className="border-b-[1px] border-b-black focus:outline-none" 
                         id="name"
@@ -43,7 +43,7 @@ function ContactPage() {
                         onChange={onChangeHandler}
                     />
 
-                    <label className="mt-[15px] text-[#87848B]" htmlFor="email">Your Email</label>
+                    <label className="mt-[15px] text-[#243b55]" htmlFor="email">Your Email</label>
                     <input
                         className="border-b-[1px] border-b-black focus:outline-none" 
                         id="email"
@@ -53,16 +53,16 @@ function ContactPage() {
                         onChange={onChangeHandler}
                     />
 
-                    <label className="mt-[15px] text-[#87848B]" htmlFor="message">Your Message</label>
+                    <label className="mt-[15px] text-[#243b55]" htmlFor="message">Your Message</label>
                     <textarea 
-                        className="border-[1px] border-[#87848B] min-h-[100px] max-h-[100px] focus:outline-none"
+                        className="border-[1px] border-[#243b55] min-h-[100px] max-h-[100px] focus:outline-none"
                         id="message"
                         type="text"
                         value={formInput.message}
                         onChange={onChangeHandler}
                         required
                     />
-                    <button className="text-[#87848B] border-[1px] border-[#87848B] rounded-lg w-1/2 mt-3 hover:bg-[#87848B] hover:text-white">Submit</button>
+                    <button className="text-[#243b55] border-[1px] border-[#243b55] rounded-lg w-1/2 mt-3 hover:bg-[#243b55] hover:text-white">Submit</button>
                 </form>
             </div>
         </div>

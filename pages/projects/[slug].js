@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -9,6 +10,9 @@ function ProjectPage({ frontmatter, content }) {;
     return (
         <>
         <ProjectHeader frontmatter={frontmatter} />
+        <Link href="/#project-section">
+            <a className="text-sm p-3 underline">Return to Projects</a>
+        </Link>
 
         <div className="py-[15px] px-[30px] rounded-[10px] shadow-[0_4px_8px_0px_rgba(0,0,0,0.2)] w-[85vw] sm:w-[70vw] lg:w-[60vw] 2xl:w-[50vw] m-auto overflow-auto">
             <div className="prose pt-[10px] max-w-[85vw] sm:max-w-[70vw] lg:max-w-[60vw 2xl:max-w-[50vw]]">
