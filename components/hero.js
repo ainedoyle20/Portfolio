@@ -6,10 +6,10 @@ function Hero() {
             <h1 className="w-2/4 text-3xl font-extrabold m-auto mb-[5vh] flex justify-center">Welcome to my personal portfolio!</h1>
             <div className="h-auto w-2/4 m-auto flex justify-center">
                 <p className="w-full sm:w-3/4 t ext-[18px]">
-                    My name is Aine Doyle. I'm a self taught web developer living in Ireland and currently building web applications using React and Next js. <br/>
+                    My name is Aine Doyle. Im a self taught web developer living in Ireland and currently building web applications using React and Next js. <br/>
                     I am disciplined, hard working and eager to work in an environment where I can learn from experienced developers.<br/> 
                     I enjoy studying new libraries and implementing them into my projects. For example, I built this website using Nextjs and Tailwind CSS. <br/>
-                    I've included four of my favourite projects along with my CV, Contact Information and links to my Github and LinkedIn accounts. <br /> <br/>
+                    Ive included four of my favourite projects along with my CV, Contact Information and links to my Github and LinkedIn accounts. <br /> <br/>
                     Have a look around and feel free to send me an email or contact me through LinkedIn if you want me on your team!
                 </p>
             </div>
