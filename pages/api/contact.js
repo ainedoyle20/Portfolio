@@ -19,18 +19,18 @@ export default async function handler(req, res) {
 
     console.log('got here 1');
 
-    await new Promise((resolve, reject) => {
-        // verify connection configuration
-        transporter.verify(function (error, success) {
-            if (error) {
-                console.log('error: ', error);
-                reject(error);
-            } else {
-                console.log("Server is ready to take our messages");
-                resolve(success);
-            }
-        });
-    });
+    // await new Promise((resolve, reject) => {
+    //     // verify connection configuration
+    //     transporter.verify(function (error, success) {
+    //         if (error) {
+    //             console.log('error: ', error);
+    //             reject(error);
+    //         } else {
+    //             console.log("Server is ready to take our messages");
+    //             resolve(success);
+    //         }
+    //     });
+    // });
 
     console.log('got here 2');
 
