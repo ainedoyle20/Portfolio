@@ -54,7 +54,7 @@ function ContactPage() {
                 </div>
 
                 <div className="flex justify-center h-[70%] w-full sm:w-[50%] border-t-[1px] border-t-[#243b55] mt-10 sm:mt-0 sm:border-t-0 sm:border-l-[1px] border-l-[#243b55]">
-                    <form className="flex flex-col w-3/4 p-3 mt-[20px]" action="https://formsubmit.co/057f378cb12e3c82ab33ce3492bbb5a5" method="POST">
+                    <form className="flex flex-col w-3/4 p-3 mt-[20px]" action="https://formsubmit.co/ainedoyleasd21@gmail.com" method="POST">
                         <label className="mt-[15px] text-[#243b55]" htmlFor="name">Your Name</label>
                         <input
                             className="border-b-[1px] border-b-black focus:outline-none" 
