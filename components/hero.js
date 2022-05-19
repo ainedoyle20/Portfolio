@@ -3,7 +3,7 @@ import Link from "next/link";
 function Hero() {
     return (
         <div className="h-[100vh] bg-gradient-to-b from-[#141e30] to-[#243b55] text-white pt-[15vh] border-b-2 border-b-black">
-            <h2 className="text-2xl font-bold mb-[5vh] flex justify-center">Hi, I'm Aine Doyle and I am a </h2>
+            <h2 className="text-2xl font-bold mb-[5vh] flex justify-center">Hi, I&#39;m Aine Doyle and I am a </h2>
 
             <h1 className="text-[80px] md2:text-[100px] flex justify-center">Web Developer</h1>
 
