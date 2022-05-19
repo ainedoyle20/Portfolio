@@ -44,10 +44,10 @@ function SkillsPage() {
                 </div>
 
                 <div className="pb-5">
-                    <div className="flex flex-col items-center">
-                        <span className="p-2 flex">More</span>
+                    <div className="group flex flex-col items-center">
+                        <span className="p-2 flex cursor-default">More</span>
                         <Link href="#some-experience">
-                            <a className="shadow-inner shadow-black rounded-full px-2 py-[1px]">⬇</a>
+                            <a className="group-hover:animate-bounce shadow-inner shadow-black rounded-full px-2 py-[1px]">⬇</a>
                         </Link>
                     </div>
                 </div>
@@ -75,10 +75,10 @@ function SkillsPage() {
                 </div>
 
                 <div className="pb-5">
-                    <div className="flex flex-col items-center">
-                        <span className="p-2 flex">More</span>
+                    <div className="group flex flex-col items-center">
+                        <span className="p-2 flex cursor-default">More</span>
                         <Link href="#working-on">
-                            <a className="shadow-inner shadow-black rounded-full px-2 py-[1px]">⬇</a>
+                            <a className="group-hover:animate-bounce shadow-inner shadow-black rounded-full px-2 py-[1px]">⬇</a>
                         </Link>
                     </div>
                 </div>

@@ -14,10 +14,10 @@ function Hero() {
                 <span className=""></span>
             </div>
 
-            <div className="absolute bottom-8 w-full flex flex-col items-center">
-                <span className="p-2">View Projects</span>
+            <div className="group absolute bottom-8 w-full flex flex-col items-center">
+                <span className="p-2 cursor-default">View Projects</span>
                 <Link href="#project-section">
-                    <a className="shadow-inner shadow-white rounded-full px-2 py-[1px]">⬇</a>
+                    <a className="group-hover:animate-bounce shadow-inner shadow-white rounded-full px-2 py-[1px]">⬇</a>
                 </Link>
             </div>
         </div>

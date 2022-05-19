@@ -13,32 +13,6 @@ function ContactPage() {
         setFormInput({ ...formInput, [id]: value });
     }
 
-    // async function onSubmitHandler(e) {
-    //     e.preventDefault();
-
-    //     const data = formInput;
-
-    //     const response = await fetch('/api/contact', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Accept': 'application/json, text/plain, */*',
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(data),
-    //     });
-
-    //     if (response.status === 200) {
-    //         setFormInput({ name: '', email: '', message: '' });
-
-    //         setTimeout(() => {
-    //             alert('Your message has been sent successfully! Thank you for contacting me and I will be in touch shortly!');
-    //         }, 1000);
-            
-    //     } else {
-    //         alert('Sorry, your message failed to send. Please try again later.');
-    //     }
-    // }
-
     return (
         <>
             <h1 className="text-[40px] flex justify-center mt-[80px] text-[#243b55] font-extrabold mb-[30px]">GET IN TOUCH</h1>
@@ -88,7 +62,7 @@ function ContactPage() {
                             required
                         />
 
-                        <input type="hidden" name="_next" value="https://portfolio-beryl-phi-82.vercel.app/contact"/>
+                        <input type="hidden" name="_next" value="https://portfolio-beryl-phi-82.vercel.app/thank-you"/>
                         <input type="hidden" name="_captcha" value="false"/>
 
                         <button type="submit" className="text-[#243b55] border-[1px] border-[#243b55] rounded-lg w-1/2 mt-3 hover:bg-[#243b55] hover:text-white">Submit</button>
