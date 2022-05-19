@@ -4,7 +4,11 @@ module.exports = {
     "./components/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'md2': '700px',
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

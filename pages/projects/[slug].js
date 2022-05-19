@@ -14,7 +14,7 @@ function ProjectPage({ frontmatter, content }) {;
             <a className="text-sm p-3 underline">Return to Projects</a>
         </Link>
 
-        <div className="py-[15px] px-[30px] rounded-[10px] shadow-[0_4px_8px_0px_rgba(0,0,0,0.2)] w-[85vw] sm:w-[70vw] lg:w-[60vw] 2xl:w-[50vw] m-auto overflow-auto">
+        <div className="py-[15px] px-[30px] rounded-[10px] shadow-[0_4px_8px_0px_rgba(0,0,0,0.2)] w-[90vw] sm:w-[85vw] md:w-[75vw] lg:w-[70vw] 2xl:w-[60vw] m-auto mt-3 overflow-auto">
             <div className="prose pt-[10px] max-w-[85vw] sm:max-w-[70vw] lg:max-w-[60vw 2xl:max-w-[50vw]]">
                 <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
             </div>

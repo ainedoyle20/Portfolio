@@ -11,3 +11,7 @@ viewLive_link: ''
 ![Portfolio Website Project Cover!](/images/projects/portfolio.png)
 
 I built this portfolio website with Next.JS and Tailwind CSS.   
+
+## Using Next.js for Pre-Generating Pages and Fetching Data
+
+## Making the Contact Form functional
