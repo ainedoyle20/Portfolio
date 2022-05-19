@@ -3,9 +3,8 @@ require('dotenv').config();
 const PASSWORD = process.env.password;
 const SENDER = process.env.sender;
 const RECIEVER = process.env.reciever;
-console.log(PASSWORD, SENDER, RECIEVER);
 
-export default function (req, res) {
+export default async function(req, res) {
 
     let nodemailer = require('nodemailer');
     const transporter = nodemailer.createTransport({
@@ -18,6 +17,19 @@ export default function (req, res) {
         },
     })
 
+    await new Promise((resolve, reject) => {
+        // verify connection configuration
+        transporter.verify(function (error, success) {
+            if (error) {
+                console.log(error);
+                reject(error);
+            } else {
+                // console.log("Server is ready to take our messages");
+                resolve(success);
+            }
+        });
+    });
+
     const mailData = {
         from: SENDER,
         to: RECIEVER,
@@ -26,12 +38,16 @@ export default function (req, res) {
         html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
     }
 
-    transporter.sendMail(mailData, function (err, info) {
-        if(err) {
-            console.log('error: ', err);
-            res.status(500).json({message: 'failed'});
-            return;
-        } 
+    await new Promise((resolve, reject) => {
+        transporter.sendMail(mailData, function (err, info) {
+            if(err) {
+                console.log('error: ', err);
+                reject(err);
+            } else {
+                // console.log('info: ', info);
+                resolve(info);
+            }
+        });
     });
 
     res.status(200).json({ message: 'email sent successfully'});
