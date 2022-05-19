@@ -4,7 +4,7 @@ const PASSWORD = process.env.password;
 const SENDER = process.env.sender;
 const RECIEVER = process.env.reciever;
 
-export default async function(req, res) {
+export default async function handler(req, res) {
 
     let nodemailer = require('nodemailer');
     const transporter = nodemailer.createTransport({
@@ -17,18 +17,22 @@ export default async function(req, res) {
         },
     })
 
+    console.log('got here 1');
+
     await new Promise((resolve, reject) => {
         // verify connection configuration
         transporter.verify(function (error, success) {
             if (error) {
-                console.log(error);
+                console.log('error: ', error);
                 reject(error);
             } else {
-                // console.log("Server is ready to take our messages");
+                console.log("Server is ready to take our messages");
                 resolve(success);
             }
         });
     });
+
+    console.log('got here 2');
 
     const mailData = {
         from: SENDER,
